@@ -10,8 +10,10 @@ class Register extends Component{
         this.state = {
             errorMessage : '',
             name : '',
+            phone : '',
             email : '',
             password : '',
+           
           
         }
     }
@@ -26,8 +28,11 @@ class Register extends Component{
          event.preventDefault();
          const register = {
              name : this.state.name,
+             phone : this.state.phone,
              email : this.state.email,
              password : this.state.password,
+             
+             
              
          }
          axios.post('http://localhost:4000/users/register', register)
@@ -35,8 +40,10 @@ class Register extends Component{
                this.setState({
                    
                    name : '',
+                   phone : '',
                    email : '',
                    password : '',
+               
                  
                });
 
@@ -79,6 +86,14 @@ class Register extends Component{
         </div>
 
         <div className="form-group">
+          <label htmlFor="inputUsernameEmail">Phone</label>
+          <input 
+          onChange={this.hundelInputChange}
+          value={this.state.phone}
+          type="text" name="phone" className="form-control" required/>
+        </div>
+
+        <div className="form-group">
           <label htmlFor="inputUsernameEmail">Username or email</label>
           <input 
           onChange={this.hundelInputChange}
@@ -94,6 +109,10 @@ class Register extends Component{
           value={this.state.password}
           type="password" name="password" className="form-control" required/>
         </div>
+
+       
+          
+        
        
         <button type="submit" className="btn btn btn-primary">
           Register

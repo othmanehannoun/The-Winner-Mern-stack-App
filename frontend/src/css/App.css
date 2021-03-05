@@ -114,7 +114,7 @@ nav .user
     display: flex;
 }
 
-
+/* 
 .description
 {
     position: absolute;
@@ -125,10 +125,10 @@ nav .user
     color: var(--color-white);
 }
 
-.description h3
+.description h2
 {
     font-size: 43px;
-}
+} */
 
 /* CSS of Second Row */
 
@@ -137,6 +137,58 @@ nav .user
     margin-top: 50px;
 }
 
-
 /* CSS of Third Row */
 
+/* CSS CHOISE CATEGORY */
+.image-grid-cover {
+    width: 100%;
+    background-size: cover;
+    position: relative;
+    margin-bottom: 30px;
+    text-shadow: rgba(0,0,0,.8) 0 1px 0;
+    border-radius: 4px;
+}
+.image-grid-clickbox {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    display: block;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,.45);
+}
+
+
+/* Container needed to position the button. Adjust the width as needed */
+  
+  /* Make the image responsive */
+  .container img {
+    width: 100%;
+    height: auto;
+  }
+  
+  /* Style the button and place it in the middle of the container/image */
+  .link {
+    position: absolute;
+    text-decoration: none;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    color: white;
+    font-size: 24px;
+    padding: 12px 24px;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+  }
+
+ 
+  .answer{
+      padding: 10px;
+      width: 100%;
+      margin-bottom: 20px;
+  }
+  

@@ -18,11 +18,9 @@ const categorySchema = mongoose.Schema({
     //     require : true
     // }
 
-
 },{
     timestaps : true
 });
-
 
 
 module.exports = mongoose.model('category', categorySchema);

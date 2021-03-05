@@ -45,7 +45,7 @@ class Note extends Component{
         const Categorys = this.state.categorys
         return(
             <div>
-                <Link style={{marginBottom: '10px'}}className="btn btn-info" to="/addnote">Add Category</Link>
+                <Link style={{marginBottom: '10px'}}className="btn btn-info" to="/addcategory">Add Category</Link>
             <div class="row row-cols-1 row-cols-md-3">
                
 
@@ -58,7 +58,7 @@ class Note extends Component{
                             <div className="card h-100">
                                 <img src={`/images/${Category.img}`} className="card-img-top" alt="..." />
                                 <div className="card-body">
-                                <h3 className="card-title">{Category.title}</h3>
+                                <h2 className="card-title">{Category.title}</h2>
                                 <p className="card-text">{Category.body}</p>
                                 </div>
                                 <div className="card-footer">

@@ -37,7 +37,7 @@ class Login extends Component{
                    email : '',
                    password : '',
                });
-                this.props.history.push('/home');
+                this.props.history.push('/user/ChoiceCategory');
               
 
            }).catch(err => { 
@@ -58,7 +58,7 @@ class Login extends Component{
     
     { this.state.errorMessage &&
     <div className="alert alert-danger" role="alert"> { this.state.errorMessage } </div> }
-      <h3>Please Log In, or <Link to="">Sign Up</Link></h3>
+      <h3>Please Log In, or <Link to="/user/register">Sign Up</Link></h3>
      
       <form method="post" onSubmit={this.hundelFormSubmit}>
         <div className="form-group">

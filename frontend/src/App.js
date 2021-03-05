@@ -6,10 +6,13 @@ import AddCategory from './Componenet/AddCategory'
 import AddQuestion from './Componenet/AddQuestion'
 import Login from './Componenet/auth/Login'
 import register from './Componenet/auth/Register'
+import ChoiceCategory from './Componenet/choiceCategory'
+import Play from './Componenet/Play'
 
 
 
 import './css/App.css';
+
 
 function App() {
   return (
@@ -20,11 +23,13 @@ function App() {
         
         <Switch>
         <Route path ="/" exact component={Body}/>
-        <Route path ="/addnote" exact component={AddCategory} />
+        <Route path ="/addcategory" exact component={AddCategory} />
         <Route path ="/question/:id" exact component={Question} />
         <Route path ="/addquestion/:id" exact component={AddQuestion} />
         <Route path ="/user/login" exact component={Login} />
         <Route path = "/user/register" exact component={register} />
+        <Route path = "/user/ChoiceCategory" exact component={ChoiceCategory} />
+        <Route path = "/user/Play/:id" exact component={Play} />
         </Switch>
         
         

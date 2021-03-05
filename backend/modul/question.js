@@ -8,11 +8,57 @@ const questionSchema = mongoose.Schema({
         maxlength : 450
     },
     categoryParent:{
-        type :mongoose.Schema.Types.ObjectId,
+        type : mongoose.Schema.Types.ObjectId,
         ref : 'categorey'
-    }
+    },
 
-},{
+    answers: [
+        {
+                text: {
+                    type: String,
+                    required: true
+                },
+                isCorrect: {
+                    type: Boolean,
+                    required: true
+                },
+            
+                text: {
+                    type: String,
+                    required: true
+                },
+                isCorrect: {
+                    type: Boolean,
+                    required: false
+            },
+            
+                text: {
+                    type: String,
+                    required: true
+                },
+                isCorrect: {
+                    type: Boolean,
+                    required: true
+                
+            },
+            
+                text: {
+                    type: String,
+                    required: true
+                },
+                isCorrect: {
+                    type: Boolean,
+                    required: true
+                
+            }
+        }
+    ]
+
+}
+
+
+
+,{
     timestaps : true
 });
 
