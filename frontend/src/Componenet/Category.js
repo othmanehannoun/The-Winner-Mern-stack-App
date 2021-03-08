@@ -56,7 +56,7 @@ class Note extends Component{
                             <div className="col mb-4">
                                 
                             <div className="card h-100">
-                                <img src={`/images/${Category.img}`} className="card-img-top" alt="..." />
+                                <img src={`/images/${Category.img}`} style={{height:'230px'}}className="card-img-top" alt="..." />
                                 <div className="card-body">
                                 <h2 className="card-title">{Category.title}</h2>
                                 <p className="card-text">{Category.body}</p>
