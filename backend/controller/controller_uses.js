@@ -58,8 +58,6 @@ const ChoiceCategory = (req, res) =>{
      res.send('Choise category')
 }
 
-
-
   module.exports = {
     register, login, ChoiceCategory
   } 

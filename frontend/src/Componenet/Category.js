@@ -34,7 +34,7 @@ class Note extends Component{
             this.setState({
                 categorys: this.state.categorys.filter(item=> item._id !== id)
             });
-            this.props.history.push('/');
+            this.props.history.push('/admin');
         }).catch(err => console.log(err))
     }
 

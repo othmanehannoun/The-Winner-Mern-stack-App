@@ -1,7 +1,6 @@
-var express = require('express');
+// var express = require('express');
 const Category = require('../modul/category');
 const Question = require('../modul/question');
-
 
 
 // GET CATEGORY
@@ -12,7 +11,6 @@ const category = (req,res)=>{
       }
       res.json({categorys})
     })
-    
   }
 
   // ADD CATEGORY
@@ -71,8 +69,6 @@ const getCategoryById =  (req,res)=>{
       console.log(err);
     })
   }
-
-
 
   module.exports = {
       category, addCategory, DeleteCategory, getCategoryById,

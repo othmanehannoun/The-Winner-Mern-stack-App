@@ -4,7 +4,7 @@ import { useHistory } from "react-router";
 import UserMenu from './UserMenu';
 
 
-function Quiz({ match}) {
+function Quiz({match}) {
 
   const [questions, setQuestion] = useState([]);
   const {id} = match.params

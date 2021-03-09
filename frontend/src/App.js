@@ -19,11 +19,11 @@ function App() {
       
       <BrowserRouter>
         <Switch>
-            <Route path ="/" exact component={Body}/>
-            <Route path ="/addcategory" exact component={AddCategory} />
-            <Route path ="/question/:id" exact component={Question} />
-            <Route path ="/addquestion/:id" exact component={AddQuestion} />
-            <Route path ="/user/login" exact component={Login} />
+            <Route path ="/admin" exact component={Body}/>
+            <Route path ="/admin/addcategory" exact component={AddCategory} />
+            <Route path ="/admin/question/:id" exact component={Question} />
+            <Route path ="/admin/addquestion/:id" exact component={AddQuestion} />
+            <Route path ="/" exact component={Login} />
             <Route path = "/user/register" exact component={register} />
             <Route path = "/user/ChoiceCategory" exact component={ChoiceCategory} />
             <Route path = "/user/Play/:id" exact component={Play} />

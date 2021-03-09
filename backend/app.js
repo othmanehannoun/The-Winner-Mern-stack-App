@@ -1,36 +1,13 @@
 const express = require('express');
-const mongoose = require('mongoose');
 const cors = require('cors');
 const path = require('path');
-const passport = require('passport');
-require('dotenv').config();
+const mongoose = require('./database/config');
+const logger = require('./database/logger.js')
+const app = express();
 
-
-
-
-// ---------connection database--------//
-  const url = 'mongodb+srv://devH:devh2020@newcluster.bdh3e.mongodb.net/mernStack?retryWrites=true&w=majority';
-
-    mongoose.connect(url,{ useNewUrlParser: true,
-         useUnifiedTopology: true,
-         useFindAndModify: false, 
-         useCreateIndex: true})
-         .then(console.log('database connected!'))
-         .catch(err=>{
-          console.log(err);
-        })
-
-
-const PORT = process.env.PORT || 4000
-
+//routes
 var indexRouter = require('./routes/index');
 var usersRouter = require('./routes/users');
-
-// const { initialize } = require('passport');
-
-
-var app = express();
-
 
 
 app.use(express.json());
@@ -39,17 +16,20 @@ app.use(express.urlencoded({ extended: false }));
 app.use(express.static(path.join(__dirname, 'public')));
 
 
-// app.use(passport.initialize());
-// app.use(passport.session());
-// require('./config/passport')(passport)
-
 app.use('/', indexRouter);
 app.use('/users', usersRouter);
 
 
 // error handler
-app.listen(PORT,() =>{
-  console.log('server Connected!!!!!!')
-})
+app.use((req,res,next)=>{
+  res.status(404).send('Sorry Dont find this route');
+  
+});
 
-module.exports = app;
+const PORT = process.env.PORT || 4000
+app.listen(PORT,()=>{
+  logger.info(`Server listen this Port ${PORT}`);
+  logger.error('sommting wrong')
+});
+
+module.exports = app

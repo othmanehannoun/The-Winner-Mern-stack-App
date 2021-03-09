@@ -31,7 +31,7 @@ class AddQuestion extends Component{
                   question : '',
                   categoryParent : ''
               });
-              this.props.history.push('/');
+              this.props.history.push('/admin');
           }).catch(err => {console.log(err)})
     }
 
